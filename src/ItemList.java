@@ -85,7 +85,7 @@ public class ItemList extends ArrayList<Item> {
                 String teaType = TEA_TYPES[rand.nextInt(TEA_TYPES.length)];
                 String color = getColorForMaterial(material);
                 String desc = String.format(
-                        "Ấm trà %s chế tác từ %s, màu %s độc đáo. Hình dáng tinh tế, dung tích %.0fml, "
+                        "Ấm trà %s chế tác từ %s, màu sắc độc đáo. Hình dáng tinh tế, dung tích %.0fml, "
                         + "phù hợp pha %s. Vòi nước chảy êm, nắp đậy kín, giữ nhiệt tốt, tôn lên hương vị trà đậm đà.",
                         name, material, color, volume, teaType
                 );
@@ -166,34 +166,6 @@ public class ItemList extends ArrayList<Item> {
         }
     }
 
-    // Hàm hỗ trợ lấy màu sắc hoặc đặc điểm dựa trên vật liệu cho TeaPot
-    private String getColorForMaterial(String material) {
-        if (material.contains("TỬ NÊ")) {
-            return "nâu tím sang trọng";
-        }
-        if (material.contains("CHU NÊ") || material.contains("ĐẠI HỒNG BÀO")) {
-            return "đỏ gạch ấm áp";
-        }
-        if (material.contains("ĐOÀN NÊ")) {
-            return "xám lục hiếm gặp";
-        }
-        if (material.contains("HẮC LONG NÊ")) {
-            return "đen huyền bí";
-        }
-        if (material.contains("LỤC NÊ")) {
-            return "xanh lục dịu mắt";
-        }
-        if (material.contains("THIÊN THANH NÊ")) {
-            return "xanh thiên thanh mát mẻ";
-        }
-        if (material.contains("Sứ")) {
-            return "trắng tinh khôi";
-        }
-        if (material.contains("Pha lê")) {
-            return "trong suốt lấp lánh";
-        }
-        return "màu sắc độc đáo";
-    }
 
     // Hàm bổ sung sản phẩm (TeaPot hoặc Rod)
     public void addItem(Item item) {
